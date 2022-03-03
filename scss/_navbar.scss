@@ -1,0 +1,24 @@
+// Navbar SCSS
+
+.navbar {
+	padding: $mp-3 $mp-2 ;
+	display: flex;
+	flex-wrap: wrap;
+
+	.logo {
+		flex: 25%;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: inline-flex;
+		flex: 75%;
+		justify-content: right;
+
+		li {
+			padding: $mp-1;
+		}
+	}
+}

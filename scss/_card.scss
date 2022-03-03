@@ -1,0 +1,16 @@
+//Card SCSS
+
+.card {
+	padding: 20px 5px;
+
+	.card-img {
+		img {
+			width: 100%;
+		}
+	}
+	.card-body {
+		p {
+			padding-bottom: 15px;
+		}
+	}
+}

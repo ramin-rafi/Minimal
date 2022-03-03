@@ -1,0 +1,49 @@
+// Aside SCSS
+aside {
+	padding: 20px 0;
+	border-top: 4px solid $blue;
+	border-bottom: 4px solid $blue;
+
+	h2,
+	.card {
+		border-bottom: 1px solid $black;
+	}
+
+	.card {
+		padding: 10px 0 20px;
+	}
+
+	.search {
+		margin: 10px auto 5px;
+
+		input {
+			border: 1px solid $black;
+			border-right: none;
+			border-radius: 0;
+			float: left;
+			padding: 5px;
+			width: 85%;
+			&:active,
+			&:focus {
+				border-radius: 0;
+			}
+		}
+
+		button {
+			border: 1px solid $black;
+			border-left: none;
+			width: 15%;
+			height: 28px;
+			cursor: pointer;
+
+			img {
+				padding: 3px;
+			}
+		}
+	}
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}

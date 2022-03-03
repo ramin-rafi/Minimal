@@ -1,0 +1,20 @@
+//Main SCSS
+
+main {
+	padding: $mp-0 $mp-2;
+	display: flex;
+
+	aside {
+		flex: 25%;
+		margin: 0 10px 0 0;
+	}
+
+	article {
+		flex: 75%;
+		margin: 0 0 0 10px;
+	}
+
+	.card-row {
+		display: flex;
+	}
+}
