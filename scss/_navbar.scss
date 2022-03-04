@@ -22,3 +22,26 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+
+		.logo {
+			padding: 20px 0;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.navbar {
+		ul {
+			li {
+				padding: 7px;
+			}
+		}
+	}
+}

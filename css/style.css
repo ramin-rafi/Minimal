@@ -18,22 +18,38 @@
   padding: 15px;
 }
 
-aside {
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar .logo {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 425px) {
+  .navbar ul li {
+    padding: 7px;
+  }
+}
+.aside {
   padding: 20px 0;
   border-top: 4px solid #0481c2;
   border-bottom: 4px solid #0481c2;
 }
-aside h2,
-aside .card {
+.aside h2,
+.aside .card {
   border-bottom: 1px solid #000;
 }
-aside .card {
+.aside .card {
   padding: 10px 0 20px;
 }
-aside .search {
+.aside .search {
   margin: 10px auto 5px;
 }
-aside .search input {
+.aside .search input {
   border: 1px solid #000;
   border-right: none;
   border-radius: 0;
@@ -41,39 +57,39 @@ aside .search input {
   padding: 5px;
   width: 85%;
 }
-aside .search input:active, aside .search input:focus {
+.aside .search input:active, .aside .search input:focus {
   border-radius: 0;
 }
-aside .search button {
+.aside .search button {
   border: 1px solid #000;
   border-left: none;
   width: 15%;
   height: 28px;
   cursor: pointer;
 }
-aside .search button img {
+.aside .search button img {
   padding: 3px;
 }
-aside::after {
+.aside::after {
   content: "";
   clear: both;
   display: table;
 }
 
-article {
+.article {
   padding: 10px 0;
   border-top: 4px solid #0481c2;
   border-bottom: 4px solid #0481c2;
 }
-article .img-container {
+.article .img-container {
   position: relative;
   align-items: center;
   margin: 20px 0;
 }
-article .img-container img {
+.article .img-container img {
   width: 100%;
 }
-article .img-container .img-overlay {
+.article .img-container .img-overlay {
   padding: 15px;
   position: absolute;
   top: 0;
@@ -87,54 +103,90 @@ article .img-container .img-overlay {
   color: #fff;
   display: flex;
 }
-article .img-container .img-overlay .content {
+.article .img-container .img-overlay .content {
   margin: auto 0;
   padding-bottom: 30px;
 }
-article .img-container .img-overlay h3 {
+.article .img-container .img-overlay h3 {
   text-align: center;
   color: #fff;
 }
-article .img-container .img-overlay p {
+.article .img-container .img-overlay p {
   letter-spacing: -0.5px;
 }
 
-main {
+@media (max-width: 992px) {
+  .article .img-container .image {
+    min-height: 300px;
+  }
+  .article .img-container .img-overlay {
+    left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .article {
+    border-top: none;
+  }
+}
+.main-body {
   padding: 0 30px;
   display: flex;
 }
-main aside {
+.main-body .aside {
   flex: 25%;
   margin: 0 10px 0 0;
 }
-main article {
+.main-body .article {
   flex: 75%;
   margin: 0 0 0 10px;
 }
-main .card-row {
+.main-body .card-row {
   display: flex;
+  flex-wrap: wrap;
+}
+.main-body .card-row .card {
+  flex: 0 0 33.33%;
 }
 
-footer {
+@media (max-width: 768px) {
+  .main-body {
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .main-body .article,
+.main-body .aside {
+    margin: 0;
+  }
+  .main-body .card-row {
+    display: block;
+  }
+}
+#footer {
   display: flex;
   padding: 0 30px;
 }
-footer ul {
+#footer ul {
   flex: 25%;
   margin: 0 10px 0 0;
   display: inline-flex;
   padding: 0;
 }
-footer ul li {
+#footer ul li {
   padding: 5px;
 }
-footer p {
+#footer p {
   flex: 75%;
   margin: 0 0 0 10px;
   padding: 5px;
   text-align: right;
 }
 
+@media (max-width: 768px) {
+  #footer {
+    flex-direction: column;
+  }
+}
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -425,6 +477,7 @@ html {
 p {
   font-size: 16px;
   line-height: 18px;
+  padding-bottom: 15px;
   margin: 0;
 }
 
@@ -443,19 +496,22 @@ a:hover, a:focus, a:active {
 h3 {
   font-size: 24px;
   line-height: 28px;
-  margin: 15px 0;
+  padding: 15px 0;
+  margin: 0;
 }
 
 h4 {
   font-size: 20px;
   line-height: 24px;
-  margin: 15px 0;
+  padding: 15px 0;
+  margin: 0;
 }
 
 h2 {
   font-size: 28px;
   line-height: 36px;
-  margin: 15px 0;
+  padding: 15px 0;
+  margin: 0;
 }
 
 h1,
@@ -476,14 +532,11 @@ h6 {
   margin: 0 auto;
 }
 
-.card {
+.card-row .card {
   padding: 20px 5px;
 }
-.card .card-img img {
+.card-row .card .card-img img {
   width: 100%;
-}
-.card .card-body p {
-  padding-bottom: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

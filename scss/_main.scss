@@ -1,20 +1,41 @@
 //Main SCSS
 
-main {
+.main-body {
 	padding: $mp-0 $mp-2;
 	display: flex;
 
-	aside {
+	.aside {
 		flex: 25%;
 		margin: 0 10px 0 0;
 	}
 
-	article {
+	.article {
 		flex: 75%;
 		margin: 0 0 0 10px;
 	}
 
 	.card-row {
 		display: flex;
+		flex-wrap: wrap;
+
+		.card {
+			flex: 0 0 33.33%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.main-body {
+		flex-direction: column;
+		padding: 0 15px;
+
+		.article,
+		.aside {
+			margin: 0;
+		}
+
+		.card-row {
+			display: block;
+		}
 	}
 }
